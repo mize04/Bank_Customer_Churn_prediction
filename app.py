@@ -79,9 +79,9 @@ if st.button("Generate Model Prediction"):
         ],
     )
 
-# Process through pipeline automatically (handles OneHotEncoding and Prediction internally)
-prediction = model.predict(input_df)[0]
-probability = model.predict_proba(input_df)[0][1]
+    # Process through pipeline automatically (handles OneHotEncoding and Prediction internally)
+    prediction = model.predict(input_df)[0]
+    probability = model.predict_proba(input_df)[0][1]
 
 # Render results on screen
 st.markdown("---")
