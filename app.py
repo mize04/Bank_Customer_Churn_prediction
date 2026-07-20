@@ -83,13 +83,13 @@ if st.button("Generate Model Prediction"):
     prediction = model.predict(input_df)[0]
     probability = model.predict_proba(input_df)[0][1]
 
-# Render results on screen
-st.markdown("---")
-if prediction == 1:
+    # Render results on screen
+    st.markdown("---")
+    if prediction == 1:
         st.error(
             f"**High Risk Alert**: Customer predicted to churn. (Probability: {probability:.2%})"
         )
-else:
+    else:
         st.success(
             f"**Low Risk**: Customer predicted to stay active. (Retention Probability: {1 - probability:.2%})"
         )
